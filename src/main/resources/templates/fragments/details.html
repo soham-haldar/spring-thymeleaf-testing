@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns.th="http://thymeleaf.org"></html>
+
+<body>
+    <div th:fragment="content (lang)">
+        <h3 th:if="${lang == 'en'}">English</h3>
+        <h3 th:if="${lang == 'es'}">Spanish</h3>
+        <ul th:each="item: ${List}">
+            <li th:text="${item}"/>
+        </ul>
+    </div>
+
+
+
+
+</body>

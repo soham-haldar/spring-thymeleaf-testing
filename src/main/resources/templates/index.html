@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns.th="http://thymeleaf.org">
+    <head>
+        <meta charset = "utf-8">
+        <title th:text="#{page.title}"></title>
+        <link rel="stylesheet" href="/styles.css">
+    </head>
+    <body>
+        <header>
+            <img th:class="logo" src="/logo.png" alt="Logo Image">
+        </header>
+        <section>    
+            <h2 th:text="#{page.subtitle}"></h2>
+
+        <div th:if="${ShowDetails}">
+            <div th:replace="~{fragments/details.html :: content('en')}"/>
+        </div>
+            <a href="http://localhost:8080/" target ="_blank">Hyperlink</a>
+            <img th:class="cover" src="/cover.jpg" alt="Cover Image">
+        </section>
+
+        <footer>
+            <p th:class="light-text">Footer</p>
+        </footer>
+    </body>
+
+</html>
